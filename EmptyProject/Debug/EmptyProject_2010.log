@@ -1,2 +1,7 @@
-﻿DXUT.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
-  EmptyProject_2010.vcxproj -> D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\Debug\EmptyProject.exe
+﻿  EmptyProject.cpp
+  player.cpp
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\player.cpp(71,22): error C2398: 요소 '1': 'int'에서 'FLOAT'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\player.cpp(71,42): error C2398: 요소 '2': 'int'에서 'FLOAT'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\player.cpp(71,42): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\player.cpp(71,22): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...

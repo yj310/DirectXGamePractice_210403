@@ -15,7 +15,7 @@ MainPage::MainPage()
 		, 0
 		, 0
 		, D3DFMT_UNKNOWN
-		, D3DPOOL_DEFAULT
+		, D3DPOOL_MANAGED
 		, D3DX_DEFAULT
 		, D3DX_DEFAULT
 		, 0
@@ -28,12 +28,23 @@ MainPage::MainPage()
 	D3DXCreateSprite(DXUTGetD3D9Device(), &spr);
 
 
+}
 
+
+MainPage::~MainPage()
+{
+	(*texture)->Release();
+	spr->Release();
 
 }
 
+
 void MainPage::Update()
 {
+	if ((GetAsyncKeyState(VK_SPACE) & 0x8000) != 0)
+	{
+		pageManager.createFirstGamePage();
+	}
 
 }
 

@@ -15,6 +15,7 @@ public:
 
 	void createMainPage();
 	void createFirstGamePage();
+	void deleteCurrent();
 
 	void Update();
 	void Render();

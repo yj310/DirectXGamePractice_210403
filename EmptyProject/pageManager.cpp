@@ -6,7 +6,7 @@
 
 PageManager::PageManager()
 {
-	
+	currentPage = nullptr;
 }
 
 void PageManager::createMainPage()
@@ -15,7 +15,7 @@ void PageManager::createMainPage()
 	{
 		delete currentPage;
 	}
-	currentPage = new MainPage;
+	currentPage = new MainPage();
 }
 
 void PageManager::createFirstGamePage()
@@ -24,7 +24,7 @@ void PageManager::createFirstGamePage()
 	{
 		delete currentPage;
 	}
-	currentPage = new FirstGamePage;
+	currentPage = new FirstGamePage();
 }
 
 void PageManager::Update()
@@ -35,4 +35,12 @@ void PageManager::Update()
 void PageManager::Render()
 {
 	currentPage->Render();
+}
+
+void PageManager::deleteCurrent()
+{
+	if (currentPage != nullptr)
+	{
+		delete currentPage;
+	}
 }

@@ -6,6 +6,7 @@ class MainPage : public Page
 {
 public:
 	MainPage();
+	virtual ~MainPage();
 	void Update() override;
 	void Render() override;
 

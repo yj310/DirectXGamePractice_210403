@@ -3,7 +3,11 @@
 #include "resource.h"
 #include "global.h"
 
-PageManager pageManager;
+PageManager pageManager; 
+int floorP[FLOOR_WIDTH * FLOOR_HEIGHT];
+int maskP[FLOOR_WIDTH * FLOOR_HEIGHT];
+int mapP[FLOOR_WIDTH * FLOOR_HEIGHT];
+int map[FLOOR_WIDTH * FLOOR_HEIGHT];
 
 
 bool CALLBACK IsD3D9DeviceAcceptable( D3DCAPS9* pCaps, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat,
@@ -31,8 +35,7 @@ HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURF
 {
 
     pageManager.createMainPage();
-
-
+   
     return S_OK;
 }
 
@@ -48,12 +51,11 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
 
-    if ((GetAsyncKeyState(VK_SPACE) & 0X8000) != 0)
+    
+    if ((GetAsyncKeyState(VK_F1) & 0x8000) != 0)
     {
-        pageManager.createFirstGamePage();
-    }
-    if ((GetAsyncKeyState(VK_ESCAPE) & 0X8000) != 0)
-    {
+        pageManager.deleteCurrent();
+        
         PostQuitMessage(0);
     }
     pageManager.Update();
@@ -94,7 +96,7 @@ void CALLBACK OnD3D9LostDevice( void* pUserContext )
 
 void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
-    
+    pageManager.deleteCurrent();
 }
 
 
@@ -123,7 +125,7 @@ INT WINAPI wWinMain( HINSTANCE, HINSTANCE, LPWSTR, int )
     DXUTSetHotkeyHandling( true, true, true );  // handle the default hotkeys
     DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( L"¶¥µû¸Ô±â °ÔÀÓ" );
-    DXUTCreateDevice( false, 1920, 1080 );
+    DXUTCreateDevice( true, 1920, 1080 );
 
     // Start the render loop
     DXUTMainLoop();
