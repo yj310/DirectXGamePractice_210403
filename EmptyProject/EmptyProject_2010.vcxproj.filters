@@ -12,6 +12,24 @@
       <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
       <Extensions>fx;fxh;hlsl</Extensions>
     </Filter>
+    <Filter Include="소스파일">
+      <UniqueIdentifier>{efc95f20-356b-4dc6-838b-7624faa4a3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더파일">
+      <UniqueIdentifier>{9da15c2c-bc58-4a7c-b854-0c133a8de25a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더파일\page">
+      <UniqueIdentifier>{c3c78a04-8f94-4d11-a991-af1712336c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\page">
+      <UniqueIdentifier>{ebe4c1de-bb43-4a65-ac85-5b19f6d3cd32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\manager">
+      <UniqueIdentifier>{67f7e65e-c1d0-48ff-a68d-50e212a31c30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더파일\manager">
+      <UniqueIdentifier>{f9da1429-68cd-494d-93c7-9ccae126dddf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\DXUT\Optional\directx.ico">
@@ -73,9 +91,35 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EmptyProject.cpp" />
+    <ClCompile Include="EmptyProject.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="firstGamePage.cpp">
+      <Filter>소스파일\page</Filter>
+    </ClCompile>
+    <ClCompile Include="MainPage.cpp">
+      <Filter>소스파일\page</Filter>
+    </ClCompile>
+    <ClCompile Include="pageManager.cpp">
+      <Filter>소스파일\manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="global.h">
+      <Filter>헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainPage.h">
+      <Filter>헤더파일\page</Filter>
+    </ClInclude>
+    <ClInclude Include="page.h">
+      <Filter>헤더파일\page</Filter>
+    </ClInclude>
+    <ClInclude Include="firstGamePage.h">
+      <Filter>헤더파일\page</Filter>
+    </ClInclude>
+    <ClInclude Include="pageManager.h">
+      <Filter>헤더파일\manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

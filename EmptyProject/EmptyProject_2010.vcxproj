@@ -384,6 +384,9 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="firstGamePage.cpp" />
+    <ClCompile Include="MainPage.cpp" />
+    <ClCompile Include="pageManager.cpp" />
     <None Include="..\..\DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
@@ -412,6 +415,11 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="firstGamePage.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="MainPage.h" />
+    <ClInclude Include="page.h" />
+    <ClInclude Include="pageManager.h" />
     <CLInclude Include="resource.h" />
     <ResourceCompile Include="EmptyProject.rc" />
   </ItemGroup>
