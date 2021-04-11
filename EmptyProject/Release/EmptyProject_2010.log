@@ -1,7 +1,11 @@
-﻿  firstGamePage.cpp
+﻿  gameSystem.cpp
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\player.h(28,1): warning C4244: '+=': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\player.h(29,1): warning C4244: '+=': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\gameSystem.cpp(186,12): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\gameSystem.cpp(187,12): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다.
-  5 of 1008 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+  1 of 1119 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    12 functions had inline decision re-evaluated but remain unchanged
+    13 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   EmptyProject_2010.vcxproj -> D:\2021\2021년도 게임기능대회\Project\DirectXGamePractice_210403\EmptyProject\Release\EmptyProject.exe

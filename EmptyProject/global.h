@@ -10,14 +10,26 @@
 #define FLOOR_HEIGHT 932
 
 #define	GAME_PAGE_X (WINDOW_WIDTH - FLOOR_WIDTH) / 2
-#define GAME_PAGE_Y (WINDOW_HEIGHT - FLOOR_HEIGHT) / 2
+#define GAME_PAGE_Y (WINDOW_HEIGHT - FLOOR_HEIGHT)
+
 
 
 #define MAP_STATE_EMPTY 0
 #define MAP_STATE_EDGE 1
 #define MAP_STATE_VISITED 2
 #define MAP_STATE_VISITING 3
+#define MAP_STATE_VIRTUAL_EMPTY 4
 
+
+struct Point
+{
+	int x;
+	int y;
+	Point(int x, int y)
+		: x(x), y(y)
+	{
+	}
+};
 
 
 extern PageManager pageManager;
